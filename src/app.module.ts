@@ -5,6 +5,8 @@ import { AppController } from './app.controller';
 import { CartModule } from './cart/cart.module';
 import { AuthModule } from './auth/auth.module';
 import { OrderModule } from './order/order.module';
+import { DatabaseService } from './database.service';
+import { TestDataService } from './testData.service';
 
 @Module({
   imports: [
@@ -15,6 +17,6 @@ import { OrderModule } from './order/order.module';
   controllers: [
     AppController,
   ],
-  providers: [],
+  providers: [DatabaseService, TestDataService],
 })
 export class AppModule {}
